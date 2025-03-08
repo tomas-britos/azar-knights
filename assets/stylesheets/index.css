@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #a67c59;
+  font-family: "Eagle Lake", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  margin-top: 1rem;
+  margin-top: 1rem;
+  color: #f6e2c7;
+  animation: brillo-infinito 2s infinite;
+}
+
+.ck-button {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  font-family: "Cinzel Decorative", serif;
+}
+.ck-button:hover, .ck-button:focus, .ck-button:active {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.main-content {
+  margin: auto;
+  display: flex;
+  padding: 1rem;
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+}
+.main-content .knight__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+.main-content .knight__img {
+  max-height: 600px;
+}
+.main-content .knight__health {
+  width: 100%;
+}
+.main-content .knight__health .health-bar {
+  display: flex;
+  align-items: center;
+  transition: all 1s ease;
+  border-radius: 0.25rem;
+  background-color: #5e7e3e;
+  padding: 0.5rem 1.5rem;
+  text-align: right;
+  color: white;
+}
+.main-content .knight__health .health-bar-100 {
+  background: #5e7e3e;
+}
+.main-content .knight__health .health-bar-75 {
+  background: #a4b95b;
+}
+.main-content .knight__health .health-bar-50 {
+  background: #ffb84d;
+}
+.main-content .knight__health .health-bar-25 {
+  background: #a62b2b;
+}
+.main-content .knight__health .health-bar-0 {
+  background: white;
+}
+.main-content .knight__actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.main-content .knight__actions .actions__button {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.main-content .knight__actions .actions__button--attack {
+  color: white;
+  background: #d15400;
+}
+.main-content .knight__actions .actions__button--deffend {
+  color: white;
+  background: #c97d36;
+}
+.main-content .knight__actions .actions__button--spell {
+  color: white;
+  background: #6d2c90;
+}
+.main-content .knight__actions .actions__button .icon-actions svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 20px;
+  max-width: 20px;
+  stroke: white;
+}
+.main-content .knight__actions .actions__button .icon-actions svg path {
+  fill: white;
+}
+.main-content__button-battle {
+  color: white;
+  background: #ff9a1f;
+  margin-top: 0.25rem;
+  max-width: 1079px;
+}/*# sourceMappingURL=index.css.map */

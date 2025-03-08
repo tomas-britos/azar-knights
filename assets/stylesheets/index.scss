@@ -1,0 +1,191 @@
+// 3. Reset y normalización
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Variables
+$bg-color: #a67c59;
+$bg-card-color: white;
+$bg-color-attack: #d15400;
+$bg-color-defense: #c97d36;
+$bg-color-spell: #6d2c90;
+$bg-color-attack-low-opacity: #d1540033;
+$bg-color-defense-low-opacity: #c97d3633;
+$bg-color-spell-low-opacity: #6d2c9033;
+
+
+$--spacing-1: 0.25rem;
+$--spacing-2: 0.5rem;
+$--spacing-3: 1rem;
+$--spacing-4: 1.5rem;
+$--spacing-5: 2rem;
+$--spacing-6: 2.5rem;
+
+$--border-radius-1: 0.25rem;
+$--border-radius-2: 0.5rem;
+$--border-radius-3: 0.75rem;
+$--border-radius-4: 1rem;
+$--border-radius-5: 1.5rem;
+$--border-radius-6: 2rem;
+
+$--font-size-1: 0.75rem;
+$--font-size-2: 1rem;
+$--font-size-3: 1.5rem;
+$--font-size-4: 2rem;
+$--font-size-5: 2.5rem;
+
+body {
+  background-color: $bg-color;
+  font-family: "Eagle Lake", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+}
+
+.title {
+  margin-top: 1rem;
+  margin-top: 1rem;
+  color: #f6e2c7;
+  animation: brillo-infinito 2s infinite;
+}
+
+
+.ck-button {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $--spacing-3;
+  background: none;
+  border: none;
+  font-size: $--font-size-2;
+  border-radius: $--border-radius-2;
+  color: white;
+  font-weight: bold;
+  transition: all .2s ease-in-out;
+  font-family: "Cinzel Decorative", serif;
+
+
+  &:hover,
+  &:focus,
+  &:active {
+    transform: scale(1.05);
+    opacity: .9;
+  }
+}
+
+.main-content {
+  margin: auto;
+  display: flex;
+  padding: $--spacing-3;
+  column-gap: $--spacing-6;
+
+  .knight {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      row-gap: $--spacing-3;
+      background: white;
+      padding: $--spacing-4;
+      border-radius: $--border-radius-4;
+    }
+
+    &__img {
+      max-height: 600px;
+    }
+
+    &__health {
+      width: 100%;
+
+      .health-bar {
+        display: flex;
+        align-items: center;
+        transition: all 1s ease;
+        border-radius: $--border-radius-1;
+        background-color: #5e7e3e;
+        padding: $--spacing-2 $--spacing-4;
+        text-align: right;
+        color: white;
+
+        &-100 {
+          background: #5e7e3e;
+        }
+
+        &-75 {
+          background: #a4b95b;
+        }
+
+        &-50 {
+          background: #ffb84d;
+        }
+
+        &-25 {
+          background: #a62b2b;
+        }
+
+        &-0 {
+          background: white;
+        }
+      }
+    }
+
+    &__actions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: $--spacing-2;
+
+      .actions__button {
+        display: flex;
+        align-items: center;
+        column-gap: $--spacing-2;
+
+        &--attack {
+          color: white;
+          background: $bg-color-attack;
+        }
+
+        &--deffend {
+          color: white;
+          background: $bg-color-defense;
+        }
+
+        &--spell {
+          color: white;
+          background: $bg-color-spell;
+        }
+
+        .icon-actions {
+          svg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-height: 20px;
+            max-width: 20px;
+
+            stroke: white;
+
+            path {
+              fill: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__button-battle {
+    color: white;
+    background: #ff9a1f;
+    margin-top: $--spacing-1;
+    max-width: 1079px;
+  }
+}
