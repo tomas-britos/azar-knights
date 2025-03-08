@@ -1,0 +1,1 @@
+Juego de toma de decisiones basado en el clásico "Piedra, papel o tijeras" con un giro de elementos medievales. Multijugador local analógico. Creado pura y exclusivamente como proyecto para colgar en mi portfolio practicando Javascript. Enjoy!
